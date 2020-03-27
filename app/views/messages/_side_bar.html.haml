@@ -1,0 +1,19 @@
+.chat-side
+  .chat-side__side-header
+    .chat-side__side-header__box
+      .chat-side__side-header__box__user-name
+        名前
+      .chat-side__side-header__box__menu
+        = link_to "#", class: "chat-side__side-header__box__menu--btn" do
+          = icon('far fa-edit', class: "chat-side__side-header__box__menu--new-group")
+          %span<>
+        = link_to "#", class: "chat-side__side-header__box__menu--btn" do
+          = icon('fa fa-cog', class: "chat-side__side-header__box__menu--eidt-user")
+          %span<>
+
+  .chat-side__groups
+    .chat-side__groups__group
+      .chat-side__groups__group__group-name
+        グループ名
+      .chat-side__groups__group__lasted-message
+        最終メッセージ
