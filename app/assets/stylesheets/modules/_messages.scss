@@ -48,11 +48,16 @@
     &__group{
       margin-bottom: 40px;
       &__group-name{
+        color: #ffffff;
         font-size: 15px;
         margin-bottom: 5px;
       }
       &__lasted-message{
+        color: #ffffff;
         font-size: 11px;
+      }
+      &__link{
+        text-decoration: none;
       }
     }
   }

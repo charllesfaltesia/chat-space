@@ -4,7 +4,7 @@
       .chat-side__side-header__box__user-name
         = current_user.name
       .chat-side__side-header__box__menu
-        = link_to "#", class: "chat-side__side-header__box__menu--btn" do
+        = link_to new_group_path, class: "chat-side__side-header__box__menu--btn" do
           = icon('far fa-edit', class: "chat-side__side-header__box__menu--new-group")
           %span<>
         = link_to edit_user_path(current_user), class: "chat-side__side-header__box__menu--btn" do
@@ -12,8 +12,10 @@
           %span<>
 
   .chat-side__groups
-    .chat-side__groups__group
-      .chat-side__groups__group__group-name
-        グループ名
-      .chat-side__groups__group__lasted-message
-        最終メッセージ
+    - current_user.groups.each do |group|
+      .chat-side__groups__group
+        = link_to '#',class: "chat-side__groups__group__link" do
+          .chat-side__groups__group__group-name
+            = group.name
+          .chat-side__groups__group__lasted-message
+            最終メッセージ
