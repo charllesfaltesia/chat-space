@@ -1,0 +1,21 @@
+.chat-main__messages__message
+  .chat-main__messages__message__upper-info
+    .chat-main__messages__message__upper-info__talker
+      = message.user.name
+    .chat-main__messages__message__upper-info__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chat-main__messages__message__text
+    - if message.body.present?
+      %p.lower-message__content
+        = message.body
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+    -# .chat-main__messages
+    -#   .chat-main__messages__message
+    -#     .chat-main__messages__message__upper-info
+    -#       .chat-main__messages__message__upper-info__talker
+    -#         = @group.messages.includes(:user)
+    -#       .chat-main__messages__message__upper-info__date
+    -#         時間です
+    -#     .chat-main__messages__message__text
+    -#       テキストだぞ
