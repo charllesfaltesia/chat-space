@@ -14,8 +14,8 @@
   .chat-side__groups
     - current_user.groups.each do |group|
       .chat-side__groups__group
-        = link_to group_messages_path(group),class: "chat-side__groups__group__link" do
+        = link_to '#',class: "chat-side__groups__group__link" do
           .chat-side__groups__group__group-name
             = group.name
           .chat-side__groups__group__lasted-message
-            = group.show_last_message
+            最終メッセージ
