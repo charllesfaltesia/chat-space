@@ -138,39 +138,88 @@
     background-color: #d2d2d2;
     height:90px;
     padding: 20px 40px;
-    &__new-message{
-      width :100%;
-      line-height: 50px;
-      display: flex;
-      &__input-box{
-        font-size: large;
-        background-color:#ffffff;
-        width: 100%;
-        position: relative;
-        display: flex;
-        &__text{
-          border-style: none;
-          height:50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color:#434a54;
-        }
-        &__img{
-          display: inline-block;
-          position: absolute;
-          right:10px;
-        }
-        &--form{
+    &__box{
+      height:50px;
+      width:100%;
+      position: relative;
+      &__message{
+        border-style: none;
+        height: 50px;
+        padding-left: 10px;
+        width: calc(100% - 115px);
+      }
+      &__btn{
+        position: absolute;
+        font-size: x-large;
+        right: 125px;
+        line-height: 50px;
+        input{
           display: none;
         }
       }
-      &__send-btn{
+      &__submit{
+        position: absolute;
+        right: 0;
         height:50px;
         margin-left: 15px;
         padding: 0 30px;
         background-color: #38aef0;
         color:#ffffff;
+        width:100px;
       }
     }
+  #new_message{
+    display: flex;
+    justify-content: space-between;
+  }
+
+    // &__new-message{
+    //   line-height: 50px;
+    //   &__input-box{
+    //     // font-size: large;
+    //     background-color:#ffffff;
+    //     position: relative;
+    //     &__text{
+    //       border-style: none;
+    //       height:50px;
+    //       width: 100%;
+    //       color:#434a54;
+    //       .message{
+    //         border: none;
+    //         width: 100%;
+    //         padding-left: 10px;
+    //         height: 50px;
+    //         // width : 82%;
+    //       }
+    //       .form__mask{
+    //         position: absolute;
+    //         right: 10px;
+    //         top: 0;
+    //         height: 50px;
+    //         .fas{
+    //           font-size: x-large;
+    //           line-height: 50px;
+    //         }
+    //       }
+          
+    //     }
+    //     &__img{
+    //       display: inline-block;
+    //       position: absolute;
+    //       right:10px;
+    //     }
+    //     &--form{
+    //       display: none;
+    //     }
+    //   }
+    //   &__send-btn{
+        // height:50px;
+        // margin-left: 15px;
+        // padding: 0 30px;
+        // background-color: #38aef0;
+        // color:#ffffff;
+        // width:100px;
+    //   }
+    // }
   }
 }
