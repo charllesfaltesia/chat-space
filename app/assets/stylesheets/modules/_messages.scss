@@ -5,6 +5,7 @@
   display: flex;
 }
 .chat-side{
+  z-index: 2;
   width :300px;
   height:100vh;
   color :#ffffff;
@@ -135,6 +136,7 @@
   }
 
   &__form{
+    z-index: 1;
     background-color: #d2d2d2;
     height:90px;
     padding: 20px 40px;
